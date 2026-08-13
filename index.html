@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austin Auto Repair — ASE Certified Mechanics in Austin, TX</title>
+<meta name="description" content="ASE certified auto repair, maintenance & diagnostics in Austin, TX. Family-owned shop on US-290. Honest prices, same-week repairs, free estimates. Call 512-865-6217.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF4D00'/><text x='50' y='68' font-size='52' font-family='Arial Black' font-weight='900' text-anchor='middle' fill='%230A0A0B'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800;900&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0A0B;
+  --ink-2:#141416;
+  --ink-3:#1C1C1F;
+  --paper:#F4F1EA;
+  --paper-2:#E9E4D8;
+  --orange:#FF4D00;
+  --orange-2:#FF6B2B;
+  --lime:#D8FF3D;
+  --gray:#9A968C;
+  --line:rgba(244,241,234,.14);
+  --mono:'Space Mono',monospace;
+  --disp:'Saira Extra Condensed',sans-serif;
+  --body:'Inter',sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--orange);color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ---------- utilities ---------- */
+.container{width:min(1240px,92vw);margin-inline:auto}
+.mono-label{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--orange);
+  display:inline-flex;
+  align-items:center;
+  gap:.75rem;
+}
+.mono-label::before{content:"";width:34px;height:1px;background:var(--orange)}
+.display{
+  font-family:var(--disp);
+  font-weight:900;
+  line-height:.92;
+  text-transform:uppercase;
+  letter-spacing:-.01em;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:.8rem;
+  font-family:var(--disp);font-weight:800;font-size:1.15rem;letter-spacing:.04em;text-transform:uppercase;
+  padding:1.05rem 1.9rem;border-radius:4px;
+  transition:transform .25s var(--ease),background .25s,color .25s,box-shadow .25s;
+  cursor:pointer;position:relative;overflow:hidden;
+}
+.btn svg{width:1.05rem;height:1.05rem;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(5px)}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--orange);color:var(--ink)}
+.btn-primary:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,77,0,.35)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper);transform:translateY(-2px)}
+.btn-white{background:var(--paper);color:var(--ink)}
+.btn-white:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 30px rgba(244,241,234,.2)}
+.skip-link{position:fixed;top:-100px;left:16px;z-index:999;background:var(--orange);color:var(--ink);padding:.7rem 1.2rem;font-family:var(--mono);font-size:.8rem;border-radius:4px;transition:top .2s}
+.skip-link:focus{top:16px}
+
+/* reveal-on-scroll */
+[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-reveal].in-view{opacity:1;transform:none}
+[data-reveal].reveal-left{transform:translateX(-44px)}
+[data-reveal].reveal-right{transform:translateX(44px)}
+[data-reveal].reveal-left.in-view,[data-reveal].reveal-right.in-view{transform:none}
+[data-reveal].reveal-scale{transform:scale(.9)}
+[data-reveal].reveal-scale.in-view{transform:none}
+[data-stagger] > *{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+[data-stagger].in-view > *{opacity:1;transform:none}
+[data-stagger].in-view > *:nth-child(1){transition-delay:.05s}
+[data-stagger].in-view > *:nth-child(2){transition-delay:.13s}
+[data-stagger].in-view > *:nth-child(3){transition-delay:.21s}
+[data-stagger].in-view > *:nth-child(4){transition-delay:.29s}
+[data-stagger].in-view > *:nth-child(5){transition-delay:.37s}
+[data-stagger].in-view > *:nth-child(6){transition-delay:.45s}
+[data-stagger].in-view > *:nth-child(7){transition-delay:.53s}
+[data-stagger].in-view > *:nth-child(8){transition-delay:.61s}
+@media (prefers-reduced-motion:reduce){
+  [data-reveal],[data-stagger] > *{opacity:1 !important;transform:none !important;transition:none !important}
+  .marquee-track{animation:none !important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- marquee ---------- */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--ink-2);position:relative}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scrollX 28s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{
+  font-family:var(--disp);font-weight:800;font-size:1.5rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.7rem 1.4rem;white-space:nowrap;display:flex;align-items:center;gap:1.4rem;color:var(--paper);
+}
+.marquee-track span::after{content:"★";color:var(--orange);font-size:.9rem}
+.marquee-orange .marquee-track span{color:var(--ink)}
+.marquee-orange .marquee-track span::after{color:var(--ink)}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 4vw;
+  transition:background .4s,backdrop-filter .4s,padding .4s,box-shadow .4s;
+}
+header.scrolled{
+  background:rgba(10,10,11,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding-block:.65rem;
+  box-shadow:0 1px 0 var(--line);
+}
+.logo{display:flex;align-items:center;gap:.8rem;font-family:var(--disp);font-weight:900;font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.logo-mark{
+  width:44px;height:44px;border-radius:8px;background:var(--orange);
+  display:grid;place-items:center;color:var(--ink);font-size:1.3rem;
+}
+.logo small{display:block;font-family:var(--mono);font-weight:400;font-size:.55rem;letter-spacing:.32em;color:var(--gray);text-transform:uppercase}
+nav.desktop{display:flex;gap:2.1rem}
+nav.desktop a{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);
+  position:relative;padding:.4rem 0;
+}
+nav.desktop a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--orange);transition:width .3s var(--ease)}
+nav.desktop a:hover::after,nav.desktop a.active::after{width:100%}
+nav.desktop a:hover{color:var(--orange-2)}
+.header-cta{display:flex;align-items:center;gap:1.4rem}
+.header-phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}
+.header-phone small{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--gray);text-transform:uppercase}
+.header-phone strong{font-family:var(--disp);font-weight:800;font-size:1.25rem;letter-spacing:.03em}
+.header-phone strong:hover{color:var(--orange-2)}
+.menu-toggle{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:6px;place-items:center}
+.menu-toggle svg{width:22px;height:22px}
+.mobile-menu{
+  position:fixed;inset:0;z-index:200;background:var(--ink);
+  display:flex;flex-direction:column;justify-content:center;padding:6vw;
+  transform:translateX(100%);transition:transform .5s var(--ease);visibility:hidden;
+}
+.mobile-menu.open{transform:none;visibility:visible}
+.mobile-menu a{
+  font-family:var(--disp);font-weight:900;font-size:2.6rem;text-transform:uppercase;line-height:1.15;
+  display:flex;align-items:baseline;gap:1rem;border-bottom:1px solid var(--line);padding:.8rem 0;
+}
+.mobile-menu a i{font-style:normal;font-family:var(--mono);font-size:.8rem;color:var(--orange)}
+.mobile-menu .mm-close{position:absolute;top:1.4rem;right:4vw;width:46px;height:46px;border:1px solid var(--line);border-radius:6px;display:grid;place-items:center}
+.mm-foot{margin-top:auto;display:flex;flex-direction:column;gap:.6rem}
+.mm-foot a{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;border:none;padding:.3rem 0}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:9rem 0 5rem;background:var(--ink)}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 90% 60% at 85% 10%,rgba(255,77,0,.13),transparent 60%),
+    radial-gradient(ellipse 70% 50% at 10% 90%,rgba(216,255,61,.05),transparent 60%),
+    linear-gradient(180deg,#0A0A0B 0%,#101012 55%,#0A0A0B 100%);
+}
+.hero-gridlines{position:absolute;inset:0;z-index:0;opacity:.35;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:90px 90px;mask-image:radial-gradient(ellipse 75% 70% at 50% 40%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 40%,#000 30%,transparent 75%)}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.8rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--lime);margin-bottom:1.6rem}
+.hero-eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--lime);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.hero h1{font-size:clamp(3.6rem,9vw,7.6rem)}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--paper)}
+.hero h1 .accent{color:var(--orange)}
+.hero h1 .row{display:block}
+.hero-sub{max-width:44ch;margin:1.8rem 0 2.6rem;color:var(--gray);font-size:1.06rem}
+.hero-sub strong{color:var(--paper);font-weight:600}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:2.4rem;margin-top:3.4rem;flex-wrap:wrap}
+.stat .num{font-family:var(--disp);font-weight:900;font-size:2.6rem;line-height:1;color:var(--paper)}
+.stat .num em{font-style:normal;color:var(--orange)}
+.stat .lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-top:.35rem}
+
+/* hero gauge */
+.hero-gauge{position:relative;z-index:2;display:grid;place-items:center}
+.gauge-wrap{
+  position:relative;width:min(380px,80vw);aspect-ratio:1;
+  display:grid;place-items:center;
+}
+.gauge-wrap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.gauge-needle{transform-origin:50% 50%;transform:rotate(-52deg);transition:transform 1.6s var(--ease) .3s}
+.hero-gauge.in-view .gauge-needle{transform:rotate(34deg)}
+.gauge-center{text-align:center;position:relative;z-index:2}
+.gauge-center strong{font-family:var(--disp);font-weight:900;font-size:3.2rem;line-height:1;display:block;color:var(--paper)}
+.gauge-center strong em{font-style:normal;color:var(--orange)}
+.gauge-center span{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gray)}
+.gauge-ring{animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gauge-float{
+  position:absolute;padding:.7rem 1.1rem;border-radius:8px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--ink-3);border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45);
+  animation:floaty 5s ease-in-out infinite;
+}
+.gauge-float.f1{top:6%;left:-8%}
+.gauge-float.f2{bottom:12%;right:-6%;animation-delay:1.4s}
+.gauge-float b{color:var(--lime)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-scroll{
+  position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gray);
+}
+.hero-scroll .line{width:1px;height:56px;background:linear-gradient(var(--orange),transparent);position:relative;overflow:hidden}
+.hero-scroll .line::after{content:"";position:absolute;top:-20px;left:0;width:100%;height:20px;background:var(--paper);animation:drop 2s var(--ease) infinite}
+@keyframes drop{to{top:100%}}
+
+/* ---------- ticker strip ---------- */
+.ticker{background:var(--orange);transform:rotate(-1.2deg) scale(1.02);margin-block:1.4rem;position:relative;z-index:5}
+.ticker .marquee-track span{color:var(--ink)}
+.ticker .marquee-track span::after{color:var(--ink)}
+
+/* ---------- services ---------- */
+section{position:relative;padding:7.5rem 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3.6rem;flex-wrap:wrap}
+.section-head h2{font-size:clamp(2.8rem,6vw,5rem);max-width:14ch}
+.section-head h2 em{font-style:normal;color:var(--orange)}
+.section-head p{max-width:38ch;color:var(--gray);font-size:.98rem}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.service-card{
+  position:relative;border:1px solid var(--line);border-radius:10px;padding:2rem 1.6rem 1.8rem;
+  background:linear-gradient(180deg,var(--ink-2),var(--ink));
+  overflow:hidden;transition:transform .45s var(--ease),border-color .45s,background .45s;
+  min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;
+}
+.service-card::before{
+  content:"";position:absolute;inset:0;background:var(--orange);
+  transform:translateY(101%);transition:transform .5s var(--ease);
+  opacity:.92;z-index:0;
+}
+.service-card:hover::before{transform:none}
+.service-card:hover{transform:translateY(-8px);border-color:var(--orange)}
+.service-card .sc-num{font-family:var(--disp);font-weight:900;font-size:3.4rem;line-height:1;color:var(--orange);position:absolute;top:1.2rem;right:1.4rem;z-index:1;transition:color .4s}
+.service-card .sc-icon{width:46px;height:46px;margin-bottom:1.1rem;position:relative;z-index:1}
+.service-card .sc-icon svg{width:100%;height:100%;stroke:var(--orange);transition:stroke .4s}
+.service-card h3{font-family:var(--disp);font-weight:800;font-size:1.55rem;text-transform:uppercase;line-height:1.05;position:relative;z-index:1}
+.service-card p{font-size:.82rem;color:var(--gray);margin-top:.55rem;position:relative;z-index:1}
+.service-card:hover .sc-num,.service-card:hover h3,.service-card:hover p{color:var(--ink)}
+.service-card:hover .sc-icon svg{stroke:var(--ink)}
+.service-card:hover .sc-arrow{opacity:1;transform:none}
+.sc-arrow{position:absolute;bottom:1.3rem;right:1.4rem;width:38px;height:38px;border-radius:50%;background:var(--ink);display:grid;place-items:center;z-index:1;opacity:0;transform:translateY(8px);transition:all .35s var(--ease)}
+.sc-arrow svg{width:17px;height:17px;stroke:var(--orange)}
+
+/* ---------- difference / about ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-visual{position:relative}
+.about-visual .gauge-big{width:min(460px,100%);margin-inline:auto}
+.about-visual .plate{
+  position:absolute;bottom:8%;right:2%;
+  background:var(--paper);color:var(--ink);padding:1.1rem 1.5rem;border-radius:10px;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  box-shadow:0 24px 50px rgba(0,0,0,.5);transform:rotate(3deg);
+}
+.about-visual .plate b{display:block;font-size:1rem;letter-spacing:.14em;color:var(--orange)}
+.about-copy h2{font-size:clamp(2.6rem,5.4vw,4.4rem);margin:1.2rem 0 1.6rem}
+.about-copy h2 em{font-style:normal;color:var(--orange)}
+.about-copy > p{color:var(--gray);margin-bottom:1rem;max-width:52ch}
+.check-list{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.6rem;margin:1.8rem 0 2.4rem}
+.check-list li{list-style:none;display:flex;align-items:center;gap:.7rem;font-size:.9rem}
+.check-list svg{width:18px;height:18px;stroke:var(--lime);flex-shrink:0}
+.hours-card{
+  margin-top:2.4rem;border:1px solid var(--line);border-radius:10px;padding:1.4rem 1.6rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1.4rem;background:var(--ink-2);flex-wrap:wrap;
+}
+.hours-card .hc-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gray)}
+.hours-card .hc-value{font-family:var(--disp);font-weight:800;font-size:1.5rem;text-transform:uppercase;letter-spacing:.03em}
+.hours-card .hc-value small{display:block;font-family:var(--mono);font-size:.62rem;font-weight:400;color:var(--gray);letter-spacing:.14em;text-transform:none;margin-top:.15rem}
+.open-pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);border:1px solid rgba(216,255,61,.35);border-radius:99px;padding:.45rem .9rem}
+.open-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime)}
+
+/* ---------- process ---------- */
+.process{background:var(--ink-2);border-block:1px solid var(--line)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.process-step{border:1px solid var(--line);border-radius:10px;padding:2rem 1.5rem;position:relative;background:var(--ink)}
+.process-step .ps-num{
+  font-family:var(--disp);font-weight:900;font-size:4.4rem;line-height:.9;
+  color:transparent;-webkit-text-stroke:1.5px var(--orange);display:block;margin-bottom:1.4rem;
+}
+.process-step h3{font-family:var(--disp);font-weight:800;font-size:1.4rem;text-transform:uppercase;margin-bottom:.5rem}
+.process-step p{font-size:.84rem;color:var(--gray)}
+.process-step .ps-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:.4rem}
+
+/* ---------- reviews ---------- */
+.reviews-band{background:linear-gradient(180deg,var(--ink),var(--ink-2));border-top:1px solid var(--line)}
+.review-big-rating{display:flex;align-items:center;gap:1.6rem;margin-bottom:3rem;flex-wrap:wrap}
+.review-big-rating .rb-num{font-family:var(--disp);font-weight:900;font-size:5rem;line-height:1}
+.review-big-rating .rb-meta{display:flex;flex-direction:column;gap:.3rem}
+.stars{display:flex;gap:.18rem}
+.stars svg{width:20px;height:20px;fill:var(--orange)}
+.review-big-rating .rb-meta span{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
+.reviews-scroll{display:flex;gap:1.1rem;overflow-x:auto;padding-bottom:1.2rem;scroll-snap-type:x mandatory}
+.reviews-scroll::-webkit-scrollbar{height:6px}
+.reviews-scroll::-webkit-scrollbar-thumb{background:var(--orange);border-radius:99px}
+.review-card{
+  min-width:min(380px,86vw);scroll-snap-align:start;
+  border:1px solid var(--line);border-radius:12px;padding:2rem;
+  background:var(--ink);display:flex;flex-direction:column;gap:1rem;
+}
+.review-card .stars svg{width:15px;height:15px}
+.review-card blockquote{font-size:.95rem;line-height:1.65;color:var(--paper)}
+.review-card cite{font-style:normal;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:auto}
+
+/* ---------- areas ---------- */
+.areas-band{background:var(--orange);color:var(--ink);transform:rotate(-.6deg) scale(1.01);padding:6.5rem 0;margin-block:2rem}
+.areas-inner{transform:rotate(.6deg)}
+.areas-inner h2{font-size:clamp(2.6rem,6vw,4.8rem);max-width:16ch}
+.areas-inner h2 em{font-style:normal;-webkit-text-stroke:1.5px var(--ink);color:transparent}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.6rem}
+.area-chip{
+  border:1.5px solid var(--ink);border-radius:8px;padding:1rem 1.2rem;
+  font-family:var(--disp);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;
+  display:flex;justify-content:space-between;align-items:center;transition:background .3s,color .3s,transform .3s;
+}
+.area-chip:hover{background:var(--ink);color:var(--orange);transform:translateY(-3px)}
+.area-chip span{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;opacity:.6}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4.5rem;align-items:start}
+.contact-left h2{font-size:clamp(2.6rem,5.4vw,4.4rem);margin:1.2rem 0 1.4rem}
+.contact-left h2 em{font-style:normal;color:var(--orange)}
+.contact-left > p{color:var(--gray);max-width:44ch;margin-bottom:2.2rem}
+.contact-links{display:flex;flex-direction:column;gap:.9rem}
+.contact-link{
+  display:flex;align-items:center;gap:1.1rem;border:1px solid var(--line);border-radius:10px;
+  padding:1.1rem 1.4rem;background:var(--ink-2);transition:border-color .3s,transform .3s var(--ease);
+}
+.contact-link:hover{border-color:var(--orange);transform:translateX(6px)}
+.contact-link .cl-ico{width:46px;height:46px;border-radius:8px;background:var(--ink-3);display:grid;place-items:center;flex-shrink:0}
+.contact-link .cl-ico svg{width:21px;height:21px;stroke:var(--orange)}
+.contact-link .cl-txt{display:flex;flex-direction:column;line-height:1.35}
+.contact-link .cl-txt small{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray)}
+.contact-link .cl-txt strong{font-family:var(--disp);font-weight:800;font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em}
+.contact-form{
+  border:1px solid var(--line);border-radius:14px;padding:2.4rem;background:var(--ink-2);
+  position:relative;overflow:hidden;
+}
+.contact-form::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--lime))}
+.contact-form h3{font-family:var(--disp);font-weight:900;font-size:2.1rem;text-transform:uppercase;margin-bottom:.4rem}
+.contact-form .cf-sub{font-size:.86rem;color:var(--gray);margin-bottom:1.8rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.1rem}
+.field label{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
+.field input,.field select,.field textarea{
+  background:var(--ink);border:1px solid var(--line);border-radius:8px;color:var(--paper);
+  padding:.95rem 1.1rem;font-family:var(--body);font-size:.95rem;transition:border-color .3s,box-shadow .3s;
+  width:100%;
+}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FF4D00' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1.1rem center}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,77,0,.18)}
+.field input::placeholder,.field textarea::placeholder{color:#6b675f}
+.form-note{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-top:1rem}
+.form-note svg{width:15px;height:15px;stroke:var(--lime);flex-shrink:0}
+
+/* ---------- map ---------- */
+.map-band{padding:0 0 6rem}
+.map-frame{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;height:440px}
+.map-frame iframe{width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+.map-overlay{
+  position:absolute;top:1.2rem;left:1.2rem;z-index:5;
+  background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:1.3rem 1.6rem;
+  max-width:300px;box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+.map-overlay h4{font-family:var(--disp);font-weight:800;font-size:1.3rem;text-transform:uppercase;margin-bottom:.3rem}
+.map-overlay p{font-size:.8rem;color:var(--gray);line-height:1.5}
+.map-overlay a{color:var(--orange);font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;display:inline-block;margin-top:.7rem}
+.map-overlay a:hover{text-decoration:underline}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:4.5rem 0 2.5rem;background:var(--ink-2)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3.4rem}
+.footer-brand p{color:var(--gray);font-size:.86rem;max-width:34ch;margin-top:1.1rem}
+.footer-col h5{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:1.2rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-col a{font-size:.88rem;color:var(--gray);transition:color .25s}
+.footer-col a:hover{color:var(--paper)}
+.footer-col a.strong-link{color:var(--paper);font-family:var(--disp);font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.05em}
+.footer-col a.strong-link:hover{color:var(--orange-2)}
+.footer-bottom{
+  border-top:1px solid var(--line);padding-top:1.8rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);
+}
+.footer-bottom .socials{display:flex;gap:.7rem}
+.footer-bottom .socials a{width:40px;height:40px;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;transition:all .3s}
+.footer-bottom .socials a:hover{background:var(--orange);border-color:var(--orange)}
+.footer-bottom .socials a:hover svg{stroke:var(--ink)}
+.footer-bottom .socials svg{width:18px;height:18px;stroke:var(--gray)}
+
+/* floating call button */
+.fab{
+  position:fixed;bottom:1.6rem;right:1.6rem;z-index:90;
+  width:62px;height:62px;border-radius:50%;background:var(--orange);color:var(--ink);
+  display:grid;place-items:center;box-shadow:0 14px 40px rgba(255,77,0,.45);
+  transition:transform .3s var(--ease);
+}
+.fab:hover{transform:scale(1.1) rotate(-6deg)}
+.fab svg{width:26px;height:26px}
+.fab::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--orange);animation:ring 2.2s var(--ease) infinite}
+@keyframes ring{0%{transform:scale(.9);opacity:.9}70%,100%{transform:scale(1.35);opacity:0}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1024px){
+  nav.desktop,.header-phone{display:none}
+  .menu-toggle{display:grid}
+  .hero-content{grid-template-columns:1fr;gap:3rem}
+  .hero-gauge{order:-1}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:3.5rem}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+}
+@media (max-width:640px){
+  .services-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .check-list{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr}
+  section{padding:5.5rem 0}
+  .hero-stats{gap:1.6rem}
+  .review-big-rating .rb-num{font-size:4rem}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <a class="logo" href="#top" aria-label="Austin Auto Repair home">
+    <span class="logo-mark" aria-hidden="true">A</span>
+    <span>Austin Auto Repair<small>EST. Austin · TX 78736</small></span>
+  </a>
+  <nav class="desktop" aria-label="Primary">
+    <a href="#services">Services</a>
+    <a href="#about">Why Us</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-cta">
+    <a class="header-phone" href="tel:+15128656217">
+      <small>Call or text</small>
+      <strong>512-865-6217</strong>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mm-close" id="menuClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <nav aria-label="Mobile">
+    <a href="#services"><i>01</i>Services</a>
+    <a href="#about"><i>02</i>Why Us</a>
+    <a href="#process"><i>03</i>Process</a>
+    <a href="#reviews"><i>04</i>Reviews</a>
+    <a href="#contact"><i>05</i>Contact</a>
+  </nav>
+  <div class="mm-foot">
+    <a href="tel:+15128656217" class="btn btn-primary" style="justify-content:center">Call 512-865-6217</a>
+    <a href="https://maps.google.com/?q=9324+US-290+Austin+TX+78736" target="_blank" rel="noopener">Get Directions →</a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-gridlines" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <span class="hero-eyebrow" data-reveal><span class="dot" aria-hidden="true"></span>Accepting new work · Open Mon–Fri 7:30am–6pm</span>
+        <h1 class="display" data-stagger>
+          <span class="row">Your car.</span>
+          <span class="row stroke">Fixed right.</span>
+          <span class="row accent">The first time.</span>
+        </h1>
+        <p class="hero-sub" data-reveal>Family-owned shop on US-290 in Austin, TX. <strong>ASE-certified technicians</strong> handling everything from check-engine lights to full engine replacements — with honest, up-front pricing. Free estimates. Most repairs done same week.</p>
+        <div class="hero-ctas" data-reveal>
+          <a class="btn btn-primary" href="tel:+15128656217">
+            Call (512) 865-6217
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">Request Service</a>
+        </div>
+        <div class="hero-stats" data-reveal>
+          <div class="stat">
+            <div class="num"><span class="counter" data-target="4.7">0</span><em>★</em></div>
+            <div class="lbl">Google rating</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span class="counter" data-target="75">0</span><em>+</em></div>
+            <div class="lbl">Google reviews</div>
+          </div>
+          <div class="stat">
+            <div class="num">ASE</div>
+            <div class="lbl">Certified techs</div>
+          </div>
+          <div class="stat">
+            <div class="num"><span class="counter" data-target="15">0</span><em>+</em></div>
+            <div class="lbl">Years in Austin</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-gauge" data-reveal="reveal-scale">
+        <div class="gauge-wrap">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FF4D00"/>
+                <stop offset="100%" stop-color="#FF8A4C"/>
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="188" fill="none" stroke="rgba(244,241,234,.08)" stroke-width="2" stroke-dasharray="4 10"/>
+            <g class="gauge-ring">
+              <circle cx="200" cy="200" r="176" fill="none" stroke="url(#ringGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="180 920" transform="rotate(-90 200 200)"/>
+              <circle cx="200" cy="200" r="176" fill="none" stroke="rgba(244,241,234,.1)" stroke-width="10"/>
+            </g>
+            <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(244,241,234,.15)" stroke-width="1.5"/>
+            <g stroke="rgba(244,241,234,.35)" stroke-width="2">
+              <line x1="200" y1="40" x2="200" y2="52"/>
+              <line x1="200" y1="348" x2="200" y2="360"/>
+              <line x1="40" y1="200" x2="52" y2="200"/>
+              <line x1="348" y1="200" x2="360" y2="200"/>
+              <line x1="87" y1="87" x2="95" y2="95"/>
+              <line x1="313" y1="87" x2="305" y2="95"/>
+              <line x1="87" y1="313" x2="95" y2="305"/>
+              <line x1="313" y1="313" x2="305" y2="305"/>
+            </g>
+            <path class="gauge-needle" d="M200 200 L200 66" stroke="#D8FF3D" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="200" cy="200" r="12" fill="#FF4D00"/>
+            <circle cx="200" cy="200" r="5" fill="#0A0A0B"/>
+          </svg>
+          <div class="gauge-center">
+            <strong><span class="counter" data-target="100">0</span><em>%</em></strong>
+            <span>Honesty guarantee</span>
+          </div>
+          <div class="gauge-float f1" data-reveal><b>FREE</b>&nbsp; estimates</div>
+          <div class="gauge-float f2" data-reveal>ASE certified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="hero-scroll" href="#services" aria-label="Scroll to services">
+    Scroll
+    <span class="line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="marquee ticker" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Full service repairs</span><span>Factory maintenance</span><span>Computer diagnostics</span><span>Engine &amp; transmission</span><span>Brakes &amp; suspension</span><span>A/C repair</span><span>Towing services</span><span>Oil change &amp; tune-up</span>
+    <span>Full service repairs</span><span>Factory maintenance</span><span>Computer diagnostics</span><span>Engine &amp; transmission</span><span>Brakes &amp; suspension</span><span>A/C repair</span><span>Towing services</span><span>Oil change &amp; tune-up</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="padding-top:8rem">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="mono-label" data-reveal>What we fix</span>
+        <h2 class="display" data-reveal>Everything your car <em>needs.</em> Nothing it doesn't.</h2>
+      </div>
+      <p data-reveal>From a strange noise to a full engine swap — if it's on wheels and in Austin, we've probably worked on it. All makes &amp; models, import and domestic.</p>
+    </div>
+    <div class="services-grid" data-stagger>
+      <div class="service-card">
+        <span class="sc-num">01</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Full Service Repair</h3>
+        <p>Bumper-to-bumper work on most makes and models — import &amp; domestic cars, trucks and SUVs.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">02</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+        <h3>Factory Maintenance</h3>
+        <p>Dealer-alternative 30/60/90K service. The same intervals, without the dealer markup.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">03</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 13h6M9 17h4"/></svg></div>
+        <h3>Diagnostics</h3>
+        <p>State-of-the-art computer diagnostics pinpoint the real issue — no guesswork, no parts roulette.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">04</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2L4 6v5h4V9h4v14h4V2H8z"/><path d="M16 7l2 2M16 11l2 2M16 15l2 2M16 19l2 2"/></svg></div>
+        <h3>Engine &amp; Transmission</h3>
+        <p>Repair or replacement of engines and transmissions — the jobs other shops turn away.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">05</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Brakes &amp; Suspension</h3>
+        <p>Steering, brakes, shocks, alignment and tire services — stops you can trust, corners you can feel.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">06</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-4 14.9V20a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3.1A8 8 0 0 0 12 2z"/><path d="M12 6v6l3 2"/></svg></div>
+        <h3>A/C &amp; Auto Electric</h3>
+        <p>Texas heat doesn't care about your warranty. A/C repair, electrical gremlins and everything between.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">07</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>Oil &amp; Tune-Up</h3>
+        <p>Oil changes, filters, plugs, coils and scheduled maintenance that keeps the big bills away.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="service-card">
+        <span class="sc-num">08</span>
+        <div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16M4 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M4 17v3m16-3v3M9 15v3h6v-3"/></svg></div>
+        <h3>Towing Services</h3>
+        <p>Stuck? We offer reliable towing so your car ends up with a mechanic who actually fixes it.</p>
+        <span class="sc-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / WHY US ============ -->
+<section id="about" class="about" style="padding-top:4rem">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual" data-reveal="reveal-left">
+        <svg class="gauge-big" viewBox="0 0 460 460" aria-hidden="true">
+          <circle cx="230" cy="230" r="218" fill="none" stroke="rgba(244,241,234,.06)" stroke-width="2"/>
+          <circle cx="230" cy="230" r="200" fill="none" stroke="#FF4D00" stroke-width="3" stroke-dasharray="2 8"/>
+          <g stroke="rgba(244,241,234,.25)" stroke-width="2">
+            <line x1="230" y1="24" x2="230" y2="44"/>
+            <line x1="230" y1="416" x2="230" y2="436"/>
+            <line x1="24" y1="230" x2="44" y2="230"/>
+            <line x1="416" y1="230" x2="436" y2="230"/>
+            <line x1="84" y1="84" x2="98" y2="98"/>
+            <line x1="376" y1="84" x2="362" y2="98"/>
+            <line x1="84" y1="376" x2="98" y2="362"/>
+            <line x1="376" y1="376" x2="362" y2="362"/>
+          </g>
+          <circle cx="230" cy="230" r="170" fill="none" stroke="rgba(244,241,234,.12)" stroke-width="1.5"/>
+          <g fill="#FF4D00" opacity=".9">
+            <circle cx="230" cy="60" r="6"/><circle cx="330" cy="95" r="4"/>
+            <circle cx="360" cy="180" r="6"/><circle cx="400" cy="230" r="3"/>
+            <circle cx="130" cy="95" r="4"/><circle cx="100" cy="180" r="6"/>
+            <circle cx="60" cy="230" r="3"/><circle cx="230" cy="400" r="5"/>
+          </g>
+          <text x="230" y="215" text-anchor="middle" font-family="Saira Extra Condensed" font-weight="900" font-size="92" fill="#F4F1EA">15+</text>
+          <text x="230" y="262" text-anchor="middle" font-family="Space Mono" font-size="17" letter-spacing="6" fill="#FF4D00">YEARS</text>
+          <text x="230" y="300" text-anchor="middle" font-family="Space Mono" font-size="13" letter-spacing="4" fill="#9A968C">ON US-290</text>
+        </svg>
+        <div class="plate">
+          <b>AUSTIN, TX 78736</b>
+          9324 US-290 · Mon–Fri 7:30–6
+        </div>
+      </div>
+      <div class="about-copy">
+        <span class="mono-label" data-reveal>Why drivers trust us</span>
+        <h2 class="display" data-reveal>Honest work, <em>honest prices.</em> That's the whole system.</h2>
+        <p data-reveal>We're a family-owned shop on US-290 in Austin. No upsells, no "we found a few more things," no parts cannon. We diagnose it, show you what's actually wrong, quote it up front — then fix it right the first time.</p>
+        <p data-reveal>That's why customers drive across town to bring us their second and third cars. It's why the reviews say the same thing, over and over: <em style="font-style:italic;color:var(--paper)">"the only place my family will take their cars."</em></p>
+        <ul class="check-list" data-reveal>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>ASE-certified technicians</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Free estimates before work</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>All makes &amp; models</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Same-week turnarounds</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>4.7★ on Google (75+ reviews)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>2 revisions free — done right</li>
+        </ul>
+        <div class="hours-card" data-reveal>
+          <div>
+            <div class="hc-label">Shop hours</div>
+            <div class="hc-value">Mon–Fri <small>Saturday &amp; Sunday: closed</small></div>
+          </div>
+          <span class="open-pill">7:30 AM – 6:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="process">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="mono-label" data-reveal>How it works</span>
+        <h2 class="display" data-reveal>From <em>"check engine"</em> to back on the road.</h2>
+      </div>
+    </div>
+    <div class="process-grid" data-stagger>
+      <div class="process-step">
+        <span class="ps-num" aria-hidden="true">01</span>
+        <span class="ps-tag">~5 min</span>
+        <h3>Tell us what's wrong</h3>
+        <p>Call or request service online. Describe the symptom — noise, light, leak, or "it just died."</p>
+      </div>
+      <div class="process-step">
+        <span class="ps-num" aria-hidden="true">02</span>
+        <span class="ps-tag">Free</span>
+        <h3>Get a real estimate</h3>
+        <p>We diagnose, show you exactly what's wrong, and quote it up front. You approve before we touch a bolt.</p>
+      </div>
+      <div class="process-step">
+        <span class="ps-num" aria-hidden="true">03</span>
+        <span class="ps-tag">Usually same week</span>
+        <h3>We fix it right</h3>
+        <p>ASE-certified techs do the work with quality parts. We call you the moment it's done.</p>
+      </div>
+      <div class="process-step">
+        <span class="ps-num" aria-hidden="true">04</span>
+        <span class="ps-tag">Peace of mind</span>
+        <h3>Pick up &amp; drive</h3>
+        <p>Pay only what we quoted. Drive away with a car that's fixed — and a shop you'll tell your neighbors about.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="reviews-band">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="mono-label" data-reveal>Word of mouth</span>
+        <h2 class="display" data-reveal>What Austin <em>drivers</em> say.</h2>
+      </div>
+      <p data-reveal>Real reviews from our Google listing. We don't cherry-pick — read them all on Google.</p>
+    </div>
+    <div class="review-big-rating" data-reveal>
+      <div class="rb-num">4.7</div>
+      <div class="rb-meta">
+        <span class="stars" aria-label="4.7 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" opacity=".45"/></svg>
+        </span>
+        <span>75+ reviews on Google</span>
+      </div>
+    </div>
+    <div class="reviews-scroll" data-reveal>
+      <figure class="review-card">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <blockquote>"This is the only place my family will take their cars. Consistently goes above and beyond on both service and integrity."</blockquote>
+        <cite>— Daniel D. · Google review</cite>
+      </figure>
+      <figure class="review-card">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <blockquote>"Prices were fair and turnaround time was very quick. They diagnosed and fixed the issue within an hour. Highly recommend."</blockquote>
+        <cite>— Verified Google review</cite>
+      </figure>
+      <figure class="review-card">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <blockquote>"He fixed both my toilet and garbage disposal in under an hour" — sorry, wrong shop. Our guys fix cars: engine lights, leaks, brakes, you name it. 4.7 stars across 75+ reviews says the rest.</blockquote>
+        <cite>— More reviews on Google</cite>
+      </figure>
+    </div>
+    <div style="margin-top:1.6rem" data-reveal>
+      <a class="btn btn-ghost" href="https://g.page/r/CZ2RiA9-9lYbEBM/review" target="_blank" rel="noopener">
+        Read all reviews on Google
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8m9 0v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AREAS ============ -->
+<section class="areas-band" aria-label="Areas we serve">
+  <div class="container areas-inner">
+    <span class="mono-label" style="color:var(--ink)" data-reveal>Service area</span>
+    <h2 class="display" data-reveal>Serving Austin <em>&amp; the surrounding hill country</em></h2>
+    <div class="areas-grid" data-stagger>
+      <div class="area-chip">Austin <span>TX</span></div>
+      <div class="area-chip">Lost Creek <span>TX</span></div>
+      <div class="area-chip">Dripping Springs <span>TX</span></div>
+      <div class="area-chip">Driftwood <span>TX</span></div>
+      <div class="area-chip">Bear Creek <span>TX</span></div>
+      <div class="area-chip">Shady Hollow <span>TX</span></div>
+      <div class="area-chip">Manchaca <span>TX</span></div>
+      <div class="area-chip">Sunset Valley <span>TX</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="padding-top:10rem">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="mono-label" data-reveal>Get in touch</span>
+        <h2 class="display" data-reveal>Need it fixed? <em>Talk to a human.</em></h2>
+        <p data-reveal>Call, text, or send a request — we'll get back to you the same business day. Drop-off is on US-290 in Oak Hill, five minutes from Hwy 290 &amp; Loop 1.</p>
+        <div class="contact-links" data-reveal>
+          <a class="contact-link" href="tel:+15128656217">
+            <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span class="cl-txt"><small>Call or text</small><strong>(512) 865-6217</strong></span>
+          </a>
+          <a class="contact-link" href="mailto:austinauto9324@att.net">
+            <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
+            <span class="cl-txt"><small>Email us</small><strong>austinauto9324@att.net</strong></span>
+          </a>
+          <a class="contact-link" href="https://maps.google.com/?q=9324+US-290+Austin+TX+78736" target="_blank" rel="noopener">
+            <span class="cl-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="cl-txt"><small>Find us</small><strong>9324 US-290, Austin, TX 78736</strong></span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" data-reveal="reveal-right" action="mailto:austinauto9324@att.net" method="post" enctype="text/plain">
+        <h3>Request service</h3>
+        <p class="cf-sub">Fill this out and it opens an email to us with your details. We reply same business day.</p>
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="Name" type="text" placeholder="Jane Driver" required>
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" name="Phone" type="tel" placeholder="(512) 555-0123" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-vehicle">Vehicle year, make &amp; model</label>
+          <input id="cf-vehicle" name="Vehicle" type="text" placeholder="2015 Honda CR-V">
+        </div>
+        <div class="field">
+          <label for="cf-service">Service type</label>
+          <select id="cf-service" name="Service" required>
+            <option value="">Choose a service…</option>
+            <option>Full Service Auto Repair</option>
+            <option>Factory Auto Maintenance</option>
+            <option>Computer Auto Diagnostics</option>
+            <option>Engine Repair &amp; Replacement</option>
+            <option>Transmission Repair</option>
+            <option>Steering, Brakes &amp; Suspension</option>
+            <option>Auto Electric Repair</option>
+            <option>A/C Repair</option>
+            <option>Oil Change &amp; Tune-Up</option>
+            <option>Towing</option>
+            <option>Other / Not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-details">What's going on?</label>
+          <textarea id="cf-details" name="Details" rows="4" placeholder="Describe the issue — noises, lights, leaks, how it started…"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">
+          Send request
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          No spam, no marketing. Just a mechanic who picks up the phone.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section class="map-band">
+  <div class="container">
+    <div class="map-frame" data-reveal>
+      <iframe title="Austin Auto Repair location map" src="https://maps.google.com/maps?q=9324%20US-290%2C%20Austin%2C%20TX%2078736&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-overlay">
+        <h4>Austin Auto Repair</h4>
+        <p>9324 US-290, Austin, TX 78736<br>Mon–Fri · 7:30 AM – 6:00 PM</p>
+        <a href="https://maps.google.com/?q=9324+US-290+Austin+TX+78736" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top" aria-label="Austin Auto Repair home">
+          <span class="logo-mark" aria-hidden="true">A</span>
+          <span>Austin Auto Repair<small>EST. Austin · TX 78736</small></span>
+        </a>
+        <p>Family-owned auto repair, maintenance and diagnostics in Austin, TX. ASE-certified technicians, honest estimates, work guaranteed.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Full Service Repair</a></li>
+          <li><a href="#services">Factory Maintenance</a></li>
+          <li><a href="#services">Diagnostics</a></li>
+          <li><a href="#services">Engine &amp; Transmission</a></li>
+          <li><a href="#services">Brakes &amp; Suspension</a></li>
+          <li><a href="#services">Towing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="#about">Why Us</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://g.page/r/CZ2RiA9-9lYbEBM/review" target="_blank" rel="noopener">Leave a Review</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Visit us</h5>
+        <ul>
+          <li><a class="strong-link" href="tel:+15128656217">(512) 865-6217</a></li>
+          <li><a href="mailto:austinauto9324@att.net">austinauto9324@att.net</a></li>
+          <li><a href="https://maps.google.com/?q=9324+US-290+Austin+TX+78736" target="_blank" rel="noopener">9324 US-290, Austin, TX 78736</a></li>
+          <li><a href="https://www.facebook.com/AustinAutoRepairTX/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.yelp.com/biz/austin-auto-repair-austin-2" target="_blank" rel="noopener">Yelp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Austin Auto Repair · All rights reserved</span>
+      <div class="socials">
+        <a href="https://www.facebook.com/AustinAutoRepairTX/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.yelp.com/biz/austin-auto-repair-austin-2" target="_blank" rel="noopener" aria-label="Yelp">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 5.9 6.6 1-4.8 4.7 1.2 6.6-5.9-3.1-5.9 3.1 1.2-6.6L2.5 8.9l6.6-1L12 2z"/></svg>
+        </a>
+        <a href="https://g.page/r/CZ2RiA9-9lYbEBM/review" target="_blank" rel="noopener" aria-label="Google reviews">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </a>
+      </div>
+      <span>Site by a local web studio</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+15128656217" aria-label="Call Austin Auto Repair now">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script>
+(function(){
+  'use strict';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* header scroll state */
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* mobile menu */
+  const toggle = document.getElementById('menuToggle');
+  const closeBtn = document.getElementById('menuClose');
+  const menu = document.getElementById('mobileMenu');
+  function openMenu(){menu.classList.add('open');menu.setAttribute('aria-hidden','false');toggle.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}
+  function closeMenu(){menu.classList.remove('open');menu.setAttribute('aria-hidden','true');toggle.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+  toggle.addEventListener('click',openMenu);
+  closeBtn.addEventListener('click',closeMenu);
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+
+  /* reveal on scroll */
+  const revealEls = document.querySelectorAll('[data-reveal],[data-stagger]');
+  if(reduceMotion){
+    revealEls.forEach(el=>el.classList.add('in-view'));
+  } else {
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(el=>io.observe(el));
+
+    /* gauge needle fires when hero gauge enters view */
+    const gauge = document.querySelector('.hero-gauge');
+    if(gauge){
+      const gio = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{if(e.isIntersecting){gauge.classList.add('in-view');gio.unobserve(gauge)}});
+      },{threshold:.4});
+      gio.observe(gauge);
+    }
+  }
+
+  /* counters */
+  const counters = document.querySelectorAll('.counter');
+  if(counters.length && !reduceMotion){
+    const cio = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const decimals = target % 1 !== 0 ? 1 : 0;
+        const dur = 1400;
+        const start = performance.now();
+        (function tick(now){
+          const p = Math.min((now-start)/dur,1);
+          const eased = 1 - Math.pow(1-p,3);
+          el.textContent = (target*eased).toFixed(decimals);
+          if(p<1)requestAnimationFrame(tick);
+        })(start);
+        cio.unobserve(el);
+      });
+    },{threshold:.6});
+    counters.forEach(c=>cio.observe(c));
+  } else {
+    counters.forEach(c=>{c.textContent=c.dataset.target});
+  }
+
+  /* active nav link highlighting */
+  const sections = ['services','about','process','reviews','contact'];
+  const navLinks = document.querySelectorAll('nav.desktop a');
+  const secObs = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+entry.target.id));
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(id=>{const s=document.getElementById(id);if(s)secObs.observe(s)});
+})();
+</script>
+</body>
+</html>
